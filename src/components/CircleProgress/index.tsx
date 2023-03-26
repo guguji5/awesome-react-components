@@ -21,8 +21,8 @@ const colorMap = {
 export default function index(props: Props) {
   const { value, color } = props;
   const { background, progressColor, borderColor } = colorMap[color];
-  //@ts-ignore
   return (
+    //@ts-ignore
     <div role='progressbar' style={{ '--value': value, '--background': background, '--progressColor': progressColor, '--borderColor': borderColor }}>
       <IconFont type='icon-Chart' />
     </div>
