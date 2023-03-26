@@ -1,0 +1,36 @@
+.outfire-block {
+  .borderRadiusMixin();
+  .boxShadowMixin();
+  &-header {
+    font-size: 14px;
+    color: #262626;
+    background-color: #e5e5e5;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 4px 4px 0 0;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .checked {
+      color: @primary-color;
+    }
+    .unchecked {
+      color: #bfbfbf;
+    }
+    .anticon {
+      color: #999;
+    }
+  }
+  &.first-card {
+    .outfire-block-header {
+      position: relative;
+      background-color: #fff;
+      .boxShadowMixin();
+    }
+  }
+  &-body {
+    background-color: #fff;
+    border-radius: 4px;
+  }
+}
