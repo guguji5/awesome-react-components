@@ -1,0 +1,81 @@
+.captcha-block {
+  transition: 1s all;
+  transform-origin: center center 300px;
+  &.verticalAlign {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    &.back {
+      animation: rotateBack ease 1s forwards;
+    }
+    &.front {
+      animation: rotateFront ease 1s forwards;
+    }
+  }
+
+  &.back {
+    animation: topRotateBack ease 1s forwards;
+  }
+  &.front {
+    animation: topRotateFront ease 1s forwards;
+  }
+}
+.captcha-input-formitem {
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+}
+
+
+
+@keyframes rotateBack {
+  from {
+    transform: rotateY(0deg) translateY(-50%);
+    opacity: 1;
+  }
+  to {
+    transform: rotateY(180deg) translateY(-50%);
+    opacity: 0;
+  }
+}
+
+@keyframes topRotateBack {
+  from {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotateY(180deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotateFront {
+  from {
+    transform: rotateY(180deg) translateY(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: rotateY(0deg) translateY(-50%);
+    opacity: 1;
+  }
+}
+@keyframes topRotateFront {
+  from {
+    transform: rotateY(180deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+}

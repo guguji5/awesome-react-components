@@ -1,11 +1,12 @@
-import React, { useState, useEffect, useRef, useReducer } from 'react';
-import { Button, Modal, Collapse, Space, Row, Col, AutoComplete, Input, Radio, Select, Slider, Form, Steps, Dropdown, Menu, message } from 'antd';
+import React, { useState } from 'react';
+import { Button, Modal, Collapse, Space, Row } from 'antd';
 const { Panel } = Collapse;
 import PageLayout from '@/components/pageLayout';
 import RadioButtonWithDropdown from '@/components/RadioButtonWithDropdown';
-import ModuleCard from '@/components/moduleCard';
-import InterfaceCard from '@/components/interfaceCard';
+import TimeRangePicker, { IRawTimeRange, TimeRangePickerWithRefresh, parseRange } from '@/components/TimeRangePicker';
+import BreadCrumb from '@/components/BreadCrumb';
 import ScrollNum from '@/components/ScrollNum';
+import CaptchaWithImage from '@/components/CaptchaWithImage';
 import './index.less';
 import FeatureTips from '@/components/FeatureTips';
 const mockVal = (str: string, repeat: number = 1) => ({
@@ -94,6 +95,21 @@ export default function Demo() {
                 onKeyChange={(v) => console.log(v)}
               />
             </Space>
+          </Panel>
+          <Panel header='Date Range Picker' key='data-range-picker'>
+            <TimeRangePicker
+              onChange={(val) => {
+                console.log(parseRange(val));
+              }}
+            />
+          </Panel>
+          <Panel header='面包屑' key='bread-crumb'>
+            <BreadCrumb crumbs={[{ text: '一级标题', link: '/status-card' }, { text: '二级标题' }]} />
+          </Panel>
+          <Panel header='图形验证码' key='captcha'>
+            <div style={{ height: 200, position: 'relative', width: 300 }}>
+              <CaptchaWithImage destinationField='demo' available={true} />
+            </div>
           </Panel>
         </Collapse>
       </div>

@@ -14,10 +14,11 @@ npm run dev
 ```
 
 #### Component List
-- [ ] BreadCrumb
+- [x] BreadCrumb
 - [x] Menu
 - [x] Card for Status 
 - [x] Tips
 - [x] Radio Button with Dropdown
 - [x] Scroll Number
-- [ ] Date Range Picker
+- [x] Date Range Picker
+- [x] CaptchaWithImage（图形验证码）
