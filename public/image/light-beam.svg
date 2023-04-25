@@ -1,0 +1,18 @@
+<svg width="141" height="306" xmlns="http://www.w3.org/2000/svg">
+  <g title='categraph'>
+    <path d="M 0 1 
+      H 72 
+      A 10 10 0 0 1 82 10 
+      V295
+      A 10 10 0 0 0 92 305 
+      H 138 " stroke-width="3" stroke="#D1D1D9" fill="none" stroke-dasharray="6 6" stroke-dashoffset='0'/>
+    <path d="M 0 1 
+      H 72 
+      A 10 10 0 0 1 82 10 
+      V295
+      A 10 10 0 0 0 92 305 
+      H 138 " stroke-width="3" stroke="#6A4DF4" fill="none" stroke-dasharray="100 450" stroke-dashoffset='100'>
+      <animate attributeName="stroke-dashoffset" begin="0" dur="2s" from="100" to="-450" repeatCount='indefinite' id='categraphLine'></animate>
+    </path>
+  </g>
+</svg>

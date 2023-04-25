@@ -4,6 +4,7 @@ const { Panel } = Collapse;
 import PageLayout from '@/components/pageLayout';
 import RadioButtonWithDropdown from '@/components/RadioButtonWithDropdown';
 import TimeRangePicker, { IRawTimeRange, TimeRangePickerWithRefresh, parseRange } from '@/components/TimeRangePicker';
+import { AlipaySquareFilled, TaobaoCircleFilled } from '@ant-design/icons';
 import BreadCrumb from '@/components/BreadCrumb';
 import ScrollNum from '@/components/ScrollNum';
 import CaptchaWithImage from '@/components/CaptchaWithImage';
@@ -109,6 +110,13 @@ export default function Demo() {
           <Panel header='图形验证码' key='captcha'>
             <div style={{ height: 200, position: 'relative', width: 300 }}>
               <CaptchaWithImage destinationField='demo' available={true} />
+            </div>
+          </Panel>
+          <Panel header='流程图的动态连接线' key='light-beam'>
+            <div style={{ display: 'flex' }}>
+              <AlipaySquareFilled style={{ fontSize: 30 }} />
+              <img src='/image/light-beam.svg' alt='light-beam' style={{ margin: '15px 0' }} />
+              <TaobaoCircleFilled style={{ fontSize: 30, alignSelf: 'self-end' }} />
             </div>
           </Panel>
         </Collapse>
