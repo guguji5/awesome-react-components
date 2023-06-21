@@ -8,6 +8,7 @@ import { AlipaySquareFilled, TaobaoCircleFilled } from '@ant-design/icons';
 import BreadCrumb from '@/components/BreadCrumb';
 import ScrollNum from '@/components/ScrollNum';
 import CaptchaWithImage from '@/components/CaptchaWithImage';
+import PptFlipEffect from '@/components/PptFlipEffect';
 import './index.less';
 import FeatureTips from '@/components/FeatureTips';
 const mockVal = (str: string, repeat: number = 1) => ({
@@ -118,6 +119,10 @@ export default function Demo() {
               <img src='/image/light-beam.svg' alt='light-beam' style={{ margin: '15px 0' }} />
               <TaobaoCircleFilled style={{ fontSize: 30, alignSelf: 'self-end' }} />
             </div>
+          </Panel>
+          <Panel header='PPT翻页效果' key='ppt-flip-effect'>
+            <p>类似轮播图。fade_in, slide_from_left, flip, grow, shrink等几个效果，每5秒切换</p>
+            <PptFlipEffect />
           </Panel>
         </Collapse>
       </div>
