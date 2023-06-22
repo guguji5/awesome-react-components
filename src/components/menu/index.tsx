@@ -82,6 +82,11 @@ const SideMenu: FC = () => {
                 },
               ],
             },
+            {
+              key: '/gantt',
+              icon: <IconFont type='icon-Menu_EventWall' />,
+              label: '甘特图',
+            },
           ])}
         onClick={handleClick}
         collapsed={collapsed}
