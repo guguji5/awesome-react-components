@@ -1,17 +1,8 @@
 import { FC } from 'react';
 import React from 'react';
-import fadeInImg from '@/assets/images/flashduty.jpg';
 import './index.less';
 
-const effectImgMap = {
-  fade_in: fadeInImg,
-  slide_from_left: fadeInImg,
-  flip: fadeInImg,
-  grow: fadeInImg,
-  shrink: fadeInImg,
-};
-
-export type IEffect = keyof typeof effectImgMap;
+export type IEffect = 'fade_in' | 'slide_from_left' | 'flip' | 'grow' | 'shrink';
 
 interface IProps {
   effect: IEffect;
