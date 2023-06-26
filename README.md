@@ -22,3 +22,5 @@ npm run dev
 - [x] Scroll Number
 - [x] Date Range Picker
 - [x] CaptchaWithImage（图形验证码）
+- [x] Gantt
+- [x] PPT flip effect
