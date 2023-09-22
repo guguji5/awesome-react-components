@@ -11,6 +11,7 @@ import CaptchaWithImage from '@/components/CaptchaWithImage';
 import PptFlipEffect from '@/components/PptFlipEffect';
 import './index.less';
 import FeatureTips from '@/components/FeatureTips';
+import CharPrint from '@/components/CharPrint';
 const mockVal = (str: string, repeat: number = 1) => ({
   value: str.repeat(repeat),
 });
@@ -123,6 +124,9 @@ export default function Demo() {
           <Panel header='PPT翻页效果' key='ppt-flip-effect'>
             <p>类似轮播图。fade_in, slide_from_left, flip, grow, shrink等几个效果，每5秒切换</p>
             <PptFlipEffect />
+          </Panel>
+          <Panel header='逐字打印效果' key='char-print-effect'>
+            <CharPrint text='逐字打印效果, use it easily' />
           </Panel>
         </Collapse>
       </div>

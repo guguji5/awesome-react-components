@@ -24,3 +24,4 @@ npm run dev
 - [x] CaptchaWithImage（图形验证码）
 - [x] Gantt
 - [x] PPT flip effect
+- [x] Char print effect
