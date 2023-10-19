@@ -25,6 +25,16 @@ function randomColor() {
   return color;
 }
 
+function makeMenuColorful() {
+  const logoDiv = document.querySelector('.home') as HTMLDivElement;
+  logoDiv.style.display = 'none';
+
+  const menuDiv = document.querySelector('.float-fc-menu') as HTMLDivElement;
+  menuDiv.style.background = 'linear-gradient(-45deg,#df7eff,#fb9999,#46eeb6,#2dabff,#66f)';
+  menuDiv.style.backgroundSize = '200% 200%';
+  menuDiv.style.animation = 'gradient 8s ease infinite';
+}
+
 export default function Demo() {
   const [num, setNum] = useState(18);
   const [radioValue, setRadioValue] = useState('1');
@@ -127,6 +137,13 @@ export default function Demo() {
           </Panel>
           <Panel header='逐字打印效果' key='char-print-effect'>
             <CharPrint text='逐字打印效果, use it easily' />
+          </Panel>
+
+          <Panel header='七彩炫酷的效果' key='colorful-effect'>
+            <div className='colorful-effect'>七彩炫酷的效果</div>
+            <Button type='primary' onClick={makeMenuColorful} style={{ marginTop: 16 }}>
+              在菜单上尝试
+            </Button>
           </Panel>
         </Collapse>
       </div>

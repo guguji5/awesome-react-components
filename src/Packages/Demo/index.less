@@ -11,3 +11,26 @@
     background: var(--slider-rail-in-drawer);
   }
 }
+
+.colorful-effect{
+  width: 600px;
+  height: 200px;
+  background: linear-gradient(-45deg,#df7eff,#fb9999,#46eeb6,#2dabff,#66f);
+  animation: gradient 8s ease infinite;
+  background-size: 200% 200%;
+  text-align: center;
+  font-size: 60px;
+  color: #fff;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 12%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0 12%;
+  }
+}
