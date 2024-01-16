@@ -25,3 +25,4 @@ npm run dev
 - [x] Gantt
 - [x] PPT flip effect
 - [x] Char print effect
+- [x] Magnifier

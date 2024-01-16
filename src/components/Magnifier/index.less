@@ -1,0 +1,63 @@
+.magnifier {
+    position: relative;
+
+    &-mask {
+        &-container {
+            background: rgba(255, 255, 255, .8);
+            transform: scale(1.5);
+            transform-origin: top left;
+        }
+
+        width: 100%;
+        position: absolute;
+        top: 0;
+        mask-repeat: no-repeat;
+        mask-position: 0px 20px;
+        box-shadow: 0 0 0 1px #12376914,
+        0 1px 1px #1237690a,
+        0 3px 3px #12376908,
+        0 6px 4px #12376905,
+        0 11px 4px #12376903;
+        mask-image: url("data:image/svg+xml,%3Csvg width='128' height='128' viewBox='0 0 128 128' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='64' cy='64' r='64' fill='%23D9D9D9'/%3E%3C/svg%3E%0A");
+        animation: magnifier-mask ease 8s infinite;
+    }
+
+    &-circle {
+        &:before {
+            backdrop-filter: blur(6px);
+        }
+
+        position: absolute;
+        top: 20px;
+        left: 0;
+        border:1px solid rgba(18, 55, 105, .06);
+        border-radius: 50%;
+        z-index: 1;
+        animation: magnifier-circle ease 8s infinite;
+    }
+}
+
+
+@keyframes magnifier-mask {
+
+    0%,
+    90% {
+        mask-position: 0 20px
+    }
+
+    45% {
+        mask-position: 180px 20px
+    }
+}
+
+@keyframes magnifier-circle {
+
+    0%,
+    90% {
+        transform: translate(0)
+    }
+
+    45% {
+        transform: translate(180px)
+    }
+}

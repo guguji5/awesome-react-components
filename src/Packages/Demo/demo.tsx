@@ -7,6 +7,7 @@ import TimeRangePicker, { IRawTimeRange, TimeRangePickerWithRefresh, parseRange 
 import { AlipaySquareFilled, TaobaoCircleFilled } from '@ant-design/icons';
 import BreadCrumb from '@/components/BreadCrumb';
 import ScrollNum from '@/components/ScrollNum';
+import Magnifier from '@/components/Magnifier';
 import CaptchaWithImage from '@/components/CaptchaWithImage';
 import PptFlipEffect from '@/components/PptFlipEffect';
 import './index.less';
@@ -138,12 +139,20 @@ export default function Demo() {
           <Panel header='逐字打印效果' key='char-print-effect'>
             <CharPrint text='逐字打印效果, use it easily' />
           </Panel>
-
           <Panel header='七彩炫酷的效果' key='colorful-effect'>
             <div className='colorful-effect'>七彩炫酷的效果</div>
             <Button type='primary' onClick={makeMenuColorful} style={{ marginTop: 16 }}>
               在菜单上尝试
             </Button>
+          </Panel>
+
+          <Panel header='放大镜效果' key='magnifier'>
+            <Magnifier>
+              <div style={{ height: 100 }}>
+                <div>放大镜效果(mask, backdrop-filter)</div>
+                <div style={{ margin: '10px 0' }}>https://github.com/guguji5</div>
+              </div>
+            </Magnifier>
           </Panel>
         </Collapse>
       </div>
