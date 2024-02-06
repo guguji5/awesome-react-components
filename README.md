@@ -26,3 +26,4 @@ npm run dev
 - [x] PPT flip effect
 - [x] Char print effect
 - [x] Magnifier
+- [x] LogQL( used for loki query)

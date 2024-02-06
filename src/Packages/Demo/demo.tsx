@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Modal, Collapse, Space, Row } from 'antd';
+import { Button, Modal, Collapse, Space, Row, Col } from 'antd';
 const { Panel } = Collapse;
 import PageLayout from '@/components/pageLayout';
 import RadioButtonWithDropdown from '@/components/RadioButtonWithDropdown';
@@ -13,18 +13,10 @@ import PptFlipEffect from '@/components/PptFlipEffect';
 import './index.less';
 import FeatureTips from '@/components/FeatureTips';
 import CharPrint from '@/components/CharPrint';
+import LogQL from '@/components/Logql';
 const mockVal = (str: string, repeat: number = 1) => ({
   value: str.repeat(repeat),
 });
-
-function randomColor() {
-  var color = 'rgb(';
-  for (var i = 0; i < 3; i++) color += (Math.random() * 256).toFixed(0) + ',';
-  //去除最后一个逗号
-  // color=color.slice(0,-1)
-  color = color.substring(0, color.length - 1) + ')';
-  return color;
-}
 
 function makeMenuColorful() {
   const logoDiv = document.querySelector('.home') as HTMLDivElement;
@@ -39,27 +31,7 @@ function makeMenuColorful() {
 export default function Demo() {
   const [num, setNum] = useState(18);
   const [radioValue, setRadioValue] = useState('1');
-  const marks = {
-    0: '2h',
-    50: {
-      style: {
-        color: '#f50',
-      },
-      label: <strong>1.5h</strong>,
-    },
-    75: {
-      style: {
-        color: 'green',
-      },
-      label: <strong>0,5h</strong>,
-    },
-    100: {
-      style: {
-        color: '#f50',
-      },
-      label: <strong>now</strong>,
-    },
-  };
+  const [isDark, setIsDark] = useState(false);
 
   return (
     <PageLayout title={'Awesome React Components'}>
@@ -153,6 +125,26 @@ export default function Demo() {
                 <div style={{ margin: '10px 0' }}>https://github.com/guguji5</div>
               </div>
             </Magnifier>
+          </Panel>
+          <Panel
+            header={
+              <Space>
+                <span>logQL组件</span>
+                <Button
+                  block
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setIsDark(!isDark);
+                  }}
+                  size='small'
+                >
+                  切换主题（{isDark ? 'dark' : 'light'}）
+                </Button>
+              </Space>
+            }
+            key='logql'
+          >
+            <LogQL isDark={isDark} />
           </Panel>
         </Collapse>
       </div>

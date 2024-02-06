@@ -8,7 +8,11 @@
   },
   "dependencies": {
     "@ant-design/icons": "^4.6.2",
+    "@emotion/css": "^11.11.2",
     "@fc-components/menu": "~1.1.21",
+    "@grafana/lezer-logql": "^0.2.2",
+    "@grafana/monaco-logql": "^0.0.7",
+    "@monaco-editor/react": "^4.6.0",
     "@svgr/core": "^5.5.0",
     "@svgr/plugin-svgo": "^5.5.0",
     "antd": "4.17.4",
@@ -23,7 +27,7 @@
     "react-router-dom": "^5.2.0",
     "react-spring": "9.4.5",
     "react-use": "^17.3.1",
-    "vite-plugin-react-svg": "^0.2.0"
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@rollup/pluginutils": "^4.1.1",
@@ -35,7 +39,8 @@
     "less": "^4.1.1",
     "lint-staged": "^11.0.0",
     "typescript": "4.3.2",
-    "vite": "^2.1.5"
+    "vite": "^2.1.5",
+    "vite-plugin-react-svg": "^0.2.0"
   },
   "lint-staged": {
     "*.{ts,tsx,less,md,json}": [
